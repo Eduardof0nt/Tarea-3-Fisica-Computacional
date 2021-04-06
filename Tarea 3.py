@@ -25,7 +25,7 @@ def Filtrar_Señal(señal, umbral):
     
     #Se filtran la señal usando la fft en cada una de las frecuencias
     #Si la amplitud en el punto es menor al umbral, se deja en 0.
-    print(señalFiltrada.shape)
+    
     for i in range(0, señalFiltrada.shape[0]):
         if (2.0/señal.size)*np.abs(señalFiltrada[i]) <= umbral:
             señalFiltrada[i] = 0
